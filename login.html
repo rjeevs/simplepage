@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="register.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidepage">
+            <h1>Welcome to the website<br>
+            SIGN UP</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis nostrum culpa veritatis! Quo est voluptates distinctio dolores aperiam assumenda sed minima ipsum temporibus optio animi ex amet voluptate magni minus, ullam alias dolorum, omnis vel repudiandae totam. Ducimus, earum consequuntur.</p>
+        </div>
+        <form>
+            <div class="form">
+                <div class="round2"></div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Username">
+            </div>
+            <div>
+                <label for="name">Email</label>
+                <input type="email" id="name" placeholder="Email">
+            </div>
+            <div>
+                <label for="name">Password</label>
+                <input type="password" id="name" placeholder="Password">
+            </div>
+            <div class="button">
+                <button id="signin">Sign in</button>
+                <button id="submit">Submit</button>
+            </div>
+            <div class="round1">
+            
+            </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="container2 signin">
+        <div class="sidepage">
+            <h1>Welcome to the website<br>
+            SIGN IN</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis nostrum culpa veritatis! Quo est voluptates distinctio dolores aperiam assumenda sed minima ipsum temporibus optio animi ex amet voluptate magni minus, ullam alias dolorum, omnis vel repudiandae totam. Ducimus, earum consequuntur.</p>
+        </div>
+        <form>
+            <div class="form">
+            <div class="round2">
+                
+            </div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Username">
+            </div>
+            <div>
+                <label for="name">Password</label>
+                <input type="password" id="name" placeholder="Password">
+            </div>
+            <div class="button">
+                <button id="signup">Sign up</button>
+                <button id="submit">Submit</button>
+            </div>
+            <div class="round1">
+            
+            </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+       const signin = document.getElementById('signin');
+       const signup = document.getElementById('signup');
+
+       const signInPage = document.querySelector('.container');
+       const signUpPage = document.querySelector('.container2');
+
+       const submit = document.querySelectorAll('#submit');
+
+    
+
+       submit.forEach((btn)=>{
+         btn.addEventListener("click",(e)=>{
+             e.preventDefault();
+         })
+       })
+
+       console.log(signInPage)
+       console.log(signUpPage)
+
+       signup.addEventListener("click",(e)=>{
+            e.preventDefault();
+             
+            signInPage.classList.add("signup")
+       })
+
+       signin.addEventListener("click",(e)=>{
+            e.preventDefault();
+            signInPage.classList.remove("signup")
+       })
+
+    </script>
+</body>
+</html>
